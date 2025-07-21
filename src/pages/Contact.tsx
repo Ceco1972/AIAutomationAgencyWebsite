@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 dark:text-white">{t('contact.getInTouch.email')}</div>
-                    <div className="text-gray-600 dark:text-gray-300">hello@aiautomationagency.com</div>
+                    <div className="text-gray-600 dark:text-gray-300">tsvetan_k_ivanov@yahoo.com</div>
                   </div>
                 </div>
 
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 dark:text-white">{t('contact.getInTouch.call')}</div>
-                    <div className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</div>
+                    <div className="text-gray-600 dark:text-gray-300">(+359) 888 276297</div>
                   </div>
                 </div>
 
@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 dark:text-white">{t('contact.getInTouch.visit')}</div>
-                    <div className="text-gray-600 dark:text-gray-300">San Francisco, CA</div>
+                    <div className="text-gray-600 dark:text-gray-300">Sofia, Bulgaria</div>
                   </div>
                 </div>
               </div>
