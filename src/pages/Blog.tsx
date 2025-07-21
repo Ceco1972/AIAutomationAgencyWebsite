@@ -2,11 +2,19 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, User, Tag, ArrowRight } from 'lucide-react';
 import { blogPosts } from '../data';
-
-const categories = ['All', 'AI Trends', 'Implementation', 'Analytics', 'Case Studies'];
+import { useTranslation } from 'react-i18next';
 
 const Blog: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const categories = [
+    t('blog.categories.all'),
+    t('blog.categories.aiTrends'),
+    t('blog.categories.implementation'),
+    t('blog.categories.analytics'),
+    t('blog.categories.caseStudies')
+  ];
 
   const filteredPosts = selectedCategory === 'All' 
     ? blogPosts 
@@ -24,12 +32,10 @@ const Blog: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              AI <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Insights</span>
-              <br />& Industry Trends
+              {t('blog.title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Stay ahead of the curve with our latest insights on AI automation, 
-              industry trends, and best practices for business transformation.
+              {t('blog.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -110,7 +116,7 @@ const Blog: React.FC = () => {
                         </span>
                       </div>
                       <button className="inline-flex items-center text-purple-600 dark:text-purple-400 font-medium hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-200 group">
-                        Read More
+                        {t('blog.readMore')}
                         <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                       </button>
                     </div>
@@ -132,19 +138,19 @@ const Blog: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Stay Informed with <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">AI Insights</span>
+              {t('blog.newsletter.title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Subscribe to our newsletter for the latest AI trends, case studies, and expert insights.
+              {t('blog.newsletter.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t('blog.newsletter.placeholder')}
                 className="flex-1 px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-600"
               />
               <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200">
-                Subscribe
+                {t('blog.newsletter.subscribe')}
               </button>
             </div>
           </motion.div>

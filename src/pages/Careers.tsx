@@ -2,31 +2,34 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, Heart, Lightbulb, Globe, ArrowRight } from 'lucide-react';
 import { jobs } from '../data';
-
-const benefits = [
-  {
-    icon: Heart,
-    title: 'Health & Wellness',
-    description: 'Comprehensive health insurance, mental health support, and wellness programs.'
-  },
-  {
-    icon: Lightbulb,
-    title: 'Learning & Growth',
-    description: 'Continuous learning opportunities, conference attendance, and skill development.'
-  },
-  {
-    icon: Globe,
-    title: 'Remote-First',
-    description: 'Work from anywhere with flexible hours and global collaboration.'
-  },
-  {
-    icon: Users,
-    title: 'Amazing Team',
-    description: 'Join a diverse, passionate team of AI experts and innovators.'
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const Careers: React.FC = () => {
+  const { t } = useTranslation();
+
+  const benefits = [
+    {
+      icon: Heart,
+      title: t('careers.benefits.healthWellness.title'),
+      description: t('careers.benefits.healthWellness.description')
+    },
+    {
+      icon: Lightbulb,
+      title: t('careers.benefits.learningGrowth.title'),
+      description: t('careers.benefits.learningGrowth.description')
+    },
+    {
+      icon: Globe,
+      title: t('careers.benefits.remoteFirst.title'),
+      description: t('careers.benefits.remoteFirst.description')
+    },
+    {
+      icon: Users,
+      title: t('careers.benefits.amazingTeam.title'),
+      description: t('careers.benefits.amazingTeam.description')
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -39,11 +42,10 @@ const Careers: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Join the <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">AI Revolution</span>
+              {t('careers.title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Be part of a team that's shaping the future of business automation. 
-              Build cutting-edge AI solutions while growing your career with industry leaders.
+              {t('careers.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -60,15 +62,13 @@ const Careers: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Culture</span>
+                {t('careers.culture.title')}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                We foster an environment of innovation, collaboration, and continuous learning. 
-                Our team is united by a shared passion for leveraging AI to solve complex business challenges.
+                {t('careers.culture.description1')}
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                From hackathons and research projects to mentorship programs and conference speaking 
-                opportunities, we invest in our team's growth and success.
+                {t('careers.culture.description2')}
               </p>
             </motion.div>
 
@@ -104,11 +104,10 @@ const Careers: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Why Work <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">With Us</span>
+              {t('careers.benefits.title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              We offer competitive benefits, flexible working arrangements, and opportunities 
-              to work on cutting-edge AI projects.
+              {t('careers.benefits.subtitle')}
             </p>
           </motion.div>
 
@@ -152,10 +151,10 @@ const Careers: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Open <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Positions</span>
+              {t('careers.positions.title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Join our growing team and help build the future of AI automation.
+              {t('careers.positions.subtitle')}
             </p>
           </motion.div>
 
@@ -215,7 +214,7 @@ const Careers: React.FC = () => {
 
                     <div className="mt-6 lg:mt-0 lg:ml-8">
                       <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 group">
-                        Apply Now
+                        {t('careers.positions.applyNow')}
                         <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
                       </button>
                     </div>
@@ -237,14 +236,13 @@ const Careers: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Don't See Your Perfect Role?
+              {t('careers.cta.title')}
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals to join our team. 
-              Send us your resume and let us know how you'd like to contribute.
+              {t('careers.cta.subtitle')}
             </p>
             <button className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 group">
-              Send Your Resume
+              {t('careers.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
             </button>
           </motion.div>

@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "AI-Powered Solutions",
+    "title": "Empowering Your Business with AI Solutions",
+    "subtitle": "We streamline operations with cutting-edge AI solutions tailored for modern enterprises. Transform your business processes with intelligent automation.",
+    "exploreSolutions": "Explore Solutions",
+    "getStarted": "Get Started"
+  },
+  "features": {
+    "title": "Why Choose Our Platform",
+    "subtitle": "We combine cutting-edge AI technology with deep business expertise to deliver solutions that transform your operations and accelerate growth.",
+    "lightningFast": {
+      "title": "Lightning Fast",
+      "description": "Deploy AI solutions in days, not months. Our proven frameworks accelerate your digital transformation."
+    },
+    "enterpriseSecurity": {
+      "title": "Enterprise Security",
+      "description": "Bank-grade security with end-to-end encryption, compliance certifications, and data protection."
+    },
+    "automation247": {
+      "title": "24/7 Automation",
+      "description": "Round-the-clock intelligent automation that works while you sleep, increasing productivity by 300%."
+    },
+    "scalableGrowth": {
+      "title": "Scalable Growth",
+      "description": "Solutions that grow with your business, from startup to enterprise scale with seamless scaling."
+    },
+    "expertSupport": {
+      "title": "Expert Support",
+      "description": "Dedicated AI specialists providing ongoing support, training, and optimization services."
+    },
+    "cuttingEdgeAI": {
+      "title": "Cutting-Edge AI",
+      "description": "Latest machine learning models and AI technologies tailored for your specific business needs."
+    }
+  },
+  "caseStudies": {
+    "title": "Success Stories",
+    "subtitle": "Real results from real businesses. Discover how our AI solutions have transformed operations and driven measurable growth.",
+    "readFullCaseStudy": "Read Full Case Study",
+    "timeSaved": "Time Saved",
+    "errorReduction": "Error Reduction",
+    "teamEfficiency": "Team Efficiency",
+    "inquiriesHandled": "Inquiries Handled",
+    "responseTime": "Response Time",
+    "satisfactionRate": "Satisfaction Rate",
+    "decisionAccuracy": "Decision Accuracy",
+    "dataProcessing": "Data Processing",
+    "costReduction": "Cost Reduction"
+  },
+  "testimonials": {
+    "title": "Trusted by Industry Leaders",
+    "subtitle": "See how we've helped businesses across industries achieve remarkable results with our AI automation solutions."
+  },
+  "about": {
+    "title": "Building the Future of Business Automation",
+    "subtitle": "We're a team of AI experts, engineers, and business strategists dedicated to transforming how enterprises operate through intelligent automation.",
+    "mission": {
+      "badge": "Our Mission",
+      "title": "Democratizing AI for Every Business",
+      "description1": "We believe that every business, regardless of size, should have access to the transformative power of artificial intelligence. Our mission is to bridge the gap between complex AI technology and practical business applications.",
+      "description2": "Since our founding in 2020, we've helped over 200 companies across 25 countries implement AI solutions that drive real, measurable results."
+    },
+    "stats": {
+      "clientsServed": "Clients Served",
+      "projectsCompleted": "AI Projects Completed",
+      "roiIncrease": "Average ROI Increase",
+      "countries": "Countries Worldwide"
+    },
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "These principles guide everything we do and shape how we approach every client relationship.",
+      "innovationFirst": {
+        "title": "Innovation First",
+        "description": "We stay at the forefront of AI technology, constantly exploring new possibilities."
+      },
+      "clientSuccess": {
+        "title": "Client Success",
+        "description": "Your success is our success. We measure our impact by your achievements."
+      },
+      "collaborative": {
+        "title": "Collaborative Approach",
+        "description": "We work as an extension of your team, ensuring seamless integration."
+      },
+      "excellence": {
+        "title": "Excellence Standard",
+        "description": "We deliver solutions that exceed expectations and industry standards."
+      }
+    },
+    "team": {
+      "title": "Meet Our Expert Team",
+      "subtitle": "World-class AI experts, engineers, and strategists working together to deliver exceptional results."
+    },
+    "vision": {
+      "badge": "Our Vision",
+      "title": "Shaping Tomorrow's Business Landscape",
+      "description1": "We envision a future where AI seamlessly integrates into every aspect of business operations, creating unprecedented efficiency, innovation, and growth opportunities.",
+      "description2": "Our roadmap includes expanding into emerging AI technologies, developing industry-specific solutions, and building the next generation of intelligent business platforms."
+    }
+  },
+  "services": {
+    "title": "AI Services That Transform Business",
+    "subtitle": "Comprehensive AI automation solutions designed to streamline operations, enhance productivity, and drive sustainable growth for your business.",
+    "learnMore": "Learn More",
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Get a free consultation to discover how our AI solutions can streamline your operations and accelerate growth.",
+      "button": "Book a Free Consultation"
+    }
+  },
+  "blog": {
+    "title": "AI Insights & Industry Trends",
+    "subtitle": "Stay ahead of the curve with our latest insights on AI automation, industry trends, and best practices for business transformation.",
+    "categories": {
+      "all": "All",
+      "aiTrends": "AI Trends",
+      "implementation": "Implementation",
+      "analytics": "Analytics",
+      "caseStudies": "Case Studies"
+    },
+    "readMore": "Read More",
+    "newsletter": {
+      "title": "Stay Informed with AI Insights",
+      "subtitle": "Subscribe to our newsletter for the latest AI trends, case studies, and expert insights.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    }
+  },
+  "careers": {
+    "title": "Join the AI Revolution",
+    "subtitle": "Be part of a team that's shaping the future of business automation. Build cutting-edge AI solutions while growing your career with industry leaders.",
+    "culture": {
+      "title": "Our Culture",
+      "description1": "We foster an environment of innovation, collaboration, and continuous learning. Our team is united by a shared passion for leveraging AI to solve complex business challenges.",
+      "description2": "From hackathons and research projects to mentorship programs and conference speaking opportunities, we invest in our team's growth and success."
+    },
+    "benefits": {
+      "title": "Why Work With Us",
+      "subtitle": "We offer competitive benefits, flexible working arrangements, and opportunities to work on cutting-edge AI projects.",
+      "healthWellness": {
+        "title": "Health & Wellness",
+        "description": "Comprehensive health insurance, mental health support, and wellness programs."
+      },
+      "learningGrowth": {
+        "title": "Learning & Growth",
+        "description": "Continuous learning opportunities, conference attendance, and skill development."
+      },
+      "remoteFirst": {
+        "title": "Remote-First",
+        "description": "Work from anywhere with flexible hours and global collaboration."
+      },
+      "amazingTeam": {
+        "title": "Amazing Team",
+        "description": "Join a diverse, passionate team of AI experts and innovators."
+      }
+    },
+    "positions": {
+      "title": "Open Positions",
+      "subtitle": "Join our growing team and help build the future of AI automation.",
+      "applyNow": "Apply Now"
+    },
+    "cta": {
+      "title": "Don't See Your Perfect Role?",
+      "subtitle": "We're always looking for talented individuals to join our team. Send us your resume and let us know how you'd like to contribute.",
+      "button": "Send Your Resume"
+    }
+  },
+  "contact": {
+    "title": "Let's Build the Future Together",
+    "subtitle": "Ready to transform your business with AI automation? Get in touch with our experts to discuss your project and discover how we can help you achieve your goals.",
+    "getInTouch": {
+      "title": "Get in Touch",
+      "description": "Whether you're looking to automate processes, implement AI solutions, or explore partnership opportunities, we'd love to hear from you.",
+      "email": "Email Us",
+      "call": "Call Us",
+      "visit": "Visit Us"
+    },
+    "businessHours": {
+      "responseTime": "Response Time",
+      "responseTimeValue": "Within 2 hours",
+      "globalReach": "Global Reach",
+      "globalReachValue": "25+ Countries",
+      "expertTeam": "Expert Team",
+      "expertTeamValue": "50+ AI Specialists"
+    },
+    "form": {
+      "title": "Start Your AI Journey",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "projectDetails": "Project Details",
+      "projectDetailsPlaceholder": "Tell us about your project, goals, and how we can help...",
+      "sendMessage": "Send Message",
+      "required": "*"
+    },
+    "map": {
+      "title": "Our Global Presence",
+      "subtitle": "With headquarters in San Francisco and team members worldwide, we provide 24/7 support and local expertise across multiple time zones."
+    }
+  },
+  "notFound": {
+    "title": "Oops! You've Gone Off-Script",
+    "subtitle": "It seems like you've wandered into uncharted digital territory. Don't worry, even our AI couldn't predict this path!",
+    "returnHome": "Return Home",
+    "goBack": "Go Back"
+  },
+  "footer": {
+    "description": "Empowering businesses with intelligent automation solutions. Transform your operations with cutting-edge AI technology.",
+    "quickLinks": "Quick Links",
+    "stayUpdated": "Stay Updated",
+    "newsletterDescription": "Subscribe to our newsletter for AI insights.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "copyright": "© 2024 AI Automation Agency. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}

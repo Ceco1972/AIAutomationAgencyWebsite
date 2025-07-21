@@ -2,38 +2,41 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Eye, Heart, Award, Users, Globe } from 'lucide-react';
 import { teamMembers } from '../data';
-
-const values = [
-  {
-    icon: Target,
-    title: 'Innovation First',
-    description: 'We stay at the forefront of AI technology, constantly exploring new possibilities.'
-  },
-  {
-    icon: Heart,
-    title: 'Client Success',
-    description: 'Your success is our success. We measure our impact by your achievements.'
-  },
-  {
-    icon: Users,
-    title: 'Collaborative Approach',
-    description: 'We work as an extension of your team, ensuring seamless integration.'
-  },
-  {
-    icon: Award,
-    title: 'Excellence Standard',
-    description: 'We deliver solutions that exceed expectations and industry standards.'
-  }
-];
-
-const stats = [
-  { label: 'Clients Served', value: '200+' },
-  { label: 'AI Projects Completed', value: '500+' },
-  { label: 'Average ROI Increase', value: '340%' },
-  { label: 'Countries Worldwide', value: '25+' }
-];
+import { useTranslation } from 'react-i18next';
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
+
+  const values = [
+    {
+      icon: Target,
+      title: t('about.values.innovationFirst.title'),
+      description: t('about.values.innovationFirst.description')
+    },
+    {
+      icon: Heart,
+      title: t('about.values.clientSuccess.title'),
+      description: t('about.values.clientSuccess.description')
+    },
+    {
+      icon: Users,
+      title: t('about.values.collaborative.title'),
+      description: t('about.values.collaborative.description')
+    },
+    {
+      icon: Award,
+      title: t('about.values.excellence.title'),
+      description: t('about.values.excellence.description')
+    }
+  ];
+
+  const stats = [
+    { label: t('about.stats.clientsServed'), value: '200+' },
+    { label: t('about.stats.projectsCompleted'), value: '500+' },
+    { label: t('about.stats.roiIncrease'), value: '340%' },
+    { label: t('about.stats.countries'), value: '25+' }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -46,12 +49,10 @@ const About: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Building the <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Future</span>
-              <br />of Business Automation
+              {t('about.title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              We're a team of AI experts, engineers, and business strategists dedicated to 
-              transforming how enterprises operate through intelligent automation.
+              {t('about.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -69,19 +70,16 @@ const About: React.FC = () => {
             >
               <div className="flex items-center space-x-2 mb-6">
                 <Target className="h-6 w-6 text-purple-600" />
-                <span className="text-purple-600 dark:text-purple-400 font-medium">Our Mission</span>
+                <span className="text-purple-600 dark:text-purple-400 font-medium">{t('about.mission.badge')}</span>
               </div>
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Democratizing AI for Every Business
+                {t('about.mission.title')}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                We believe that every business, regardless of size, should have access to the transformative 
-                power of artificial intelligence. Our mission is to bridge the gap between complex AI technology 
-                and practical business applications.
+                {t('about.mission.description1')}
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                Since our founding in 2020, we've helped over 200 companies across 25 countries implement 
-                AI solutions that drive real, measurable results.
+                {t('about.mission.description2')}
               </p>
             </motion.div>
 
@@ -142,10 +140,10 @@ const About: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Core Values</span>
+              {t('about.values.title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              These principles guide everything we do and shape how we approach every client relationship.
+              {t('about.values.subtitle')}
             </p>
           </motion.div>
 
@@ -189,10 +187,10 @@ const About: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Meet Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Expert Team</span>
+              {t('about.team.title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              World-class AI experts, engineers, and strategists working together to deliver exceptional results.
+              {t('about.team.subtitle')}
             </p>
           </motion.div>
 
@@ -245,18 +243,16 @@ const About: React.FC = () => {
             >
               <div className="flex items-center space-x-2 mb-6">
                 <Eye className="h-6 w-6 text-purple-600" />
-                <span className="text-purple-600 dark:text-purple-400 font-medium">Our Vision</span>
+                <span className="text-purple-600 dark:text-purple-400 font-medium">{t('about.vision.badge')}</span>
               </div>
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Shaping Tomorrow's Business Landscape
+                {t('about.vision.title')}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                We envision a future where AI seamlessly integrates into every aspect of business operations, 
-                creating unprecedented efficiency, innovation, and growth opportunities.
+                {t('about.vision.description1')}
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                Our roadmap includes expanding into emerging AI technologies, developing industry-specific 
-                solutions, and building the next generation of intelligent business platforms.
+                {t('about.vision.description2')}
               </p>
             </motion.div>
 

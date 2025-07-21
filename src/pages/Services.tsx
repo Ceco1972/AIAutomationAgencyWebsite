@@ -4,8 +4,11 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { services } from '../data';
 import * as Icons from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Services: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -18,12 +21,10 @@ const Services: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              AI <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Services</span>
-              <br />That Transform Business
+              {t('services.title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI automation solutions designed to streamline operations, 
-              enhance productivity, and drive sustainable growth for your business.
+              {t('services.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -68,7 +69,7 @@ const Services: React.FC = () => {
                     </ul>
 
                     <button className="inline-flex items-center text-purple-600 dark:text-purple-400 font-semibold hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-200 group">
-                      Learn More
+                      {t('services.learnMore')}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                     </button>
                   </div>
@@ -89,17 +90,16 @@ const Services: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              {t('services.cta.title')}
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Get a free consultation to discover how our AI solutions can streamline 
-              your operations and accelerate growth.
+              {t('services.cta.subtitle')}
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 group"
             >
-              Book a Free Consultation
+              {t('services.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
           </motion.div>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X, Moon, Sun, Brain } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,6 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,12 +26,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, []);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
+    { name: t('nav.home'), href: '/' },
+    { name: t('nav.about'), href: '/about' },
+    { name: t('nav.services'), href: '/services' },
+    { name: t('nav.blog'), href: '/blog' },
+    { name: t('nav.careers'), href: '/careers' },
+    { name: t('nav.contact'), href: '/contact' }
   ];
 
   return (
@@ -75,6 +78,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               {/* Right side actions */}
               <div className="flex items-center space-x-4">
+                {/* Language switcher */}
+                <LanguageSwitcher />
+
                 {/* Dark mode toggle */}
                 <button
                   onClick={() => setIsDarkMode(!isDarkMode)}
@@ -88,7 +94,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   to="/contact"
                   className="hidden md:inline-flex px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
                 >
-                  Get Started
+                  {t('nav.getStarted')}
                 </Link>
 
                 {/* Mobile menu button */}
@@ -126,7 +132,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
                 >
-                  Get Started
+                  {t('nav.getStarted')}
                 </Link>
               </div>
             </motion.div>
@@ -151,7 +157,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <span className="text-lg font-bold">AI Automation Agency</span>
                 </div>
                 <p className="text-gray-400 mb-6 max-w-md">
-                  Empowering businesses with intelligent automation solutions. Transform your operations with cutting-edge AI technology.
+                  {t('footer.description')}
                 </p>
                 <div className="flex space-x-4">
                   <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
@@ -168,7 +174,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               {/* Quick links */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
                 <ul className="space-y-2">
                   {navigation.map((item) => (
                     <li key={item.name}>
@@ -185,23 +191,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               {/* Newsletter */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-                <p className="text-gray-400 mb-4">Subscribe to our newsletter for AI insights.</p>
+                <h3 className="text-lg font-semibold mb-4">{t('footer.stayUpdated')}</h3>
+                <p className="text-gray-400 mb-4">{t('footer.newsletterDescription')}</p>
                 <div className="flex">
                   <input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={t('footer.emailPlaceholder')}
                     className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
                   />
                   <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-r-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200">
-                    Subscribe
+                    {t('footer.subscribe')}
                   </button>
                 </div>
               </div>
             </div>
 
             <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-              <p>&copy; 2024 AI Automation Agency. All rights reserved.</p>
+              <p>{t('footer.copyright')}</p>
             </div>
           </div>
         </footer>

@@ -2,8 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
       {/* Background elements */}
@@ -24,7 +27,7 @@ const Hero: React.FC = () => {
               className="flex items-center space-x-2 mb-6"
             >
               <Sparkles className="h-5 w-5 text-purple-600" />
-              <span className="text-purple-600 dark:text-purple-400 font-medium">AI-Powered Solutions</span>
+              <span className="text-purple-600 dark:text-purple-400 font-medium">{t('hero.badge')}</span>
             </motion.div>
 
             <motion.h1
@@ -33,13 +36,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-5xl lg:text-7xl font-bold leading-tight mb-6"
             >
-              <span className="text-gray-900 dark:text-white">Empowering Your</span>
-              <br />
-              <span className="text-gray-900 dark:text-white">Business with</span>
-              <br />
-              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                AI Solutions
-              </span>
+              {t('hero.title')}
             </motion.h1>
 
             <motion.p
@@ -48,8 +45,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl"
             >
-              We streamline operations with cutting-edge AI solutions tailored for modern enterprises. 
-              Transform your business processes with intelligent automation.
+              {t('hero.subtitle')}
             </motion.p>
 
             <motion.div
@@ -62,14 +58,14 @@ const Hero: React.FC = () => {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 group"
               >
-                Explore Solutions
+                {t('hero.exploreSolutions')}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-600 text-purple-600 dark:text-purple-400 font-semibold rounded-lg hover:bg-purple-600 hover:text-white dark:hover:bg-purple-600 dark:hover:text-white transition-all duration-200"
               >
-                Get Started
+                {t('hero.getStarted')}
               </Link>
             </motion.div>
           </div>

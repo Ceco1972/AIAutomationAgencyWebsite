@@ -1,41 +1,45 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Shield, Clock, TrendingUp, Users, Sparkles } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const features = [
-  {
-    icon: Zap,
-    title: 'Lightning Fast',
-    description: 'Deploy AI solutions in days, not months. Our proven frameworks accelerate your digital transformation.'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-grade security with end-to-end encryption, compliance certifications, and data protection.'
-  },
-  {
-    icon: Clock,
-    title: '24/7 Automation',
-    description: 'Round-the-clock intelligent automation that works while you sleep, increasing productivity by 300%.'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Scalable Growth',
-    description: 'Solutions that grow with your business, from startup to enterprise scale with seamless scaling.'
-  },
-  {
-    icon: Users,
-    title: 'Expert Support',
-    description: 'Dedicated AI specialists providing ongoing support, training, and optimization services.'
-  },
-  {
-    icon: Sparkles,
-    title: 'Cutting-Edge AI',
-    description: 'Latest machine learning models and AI technologies tailored for your specific business needs.'
-  }
-];
 
 const Features: React.FC = () => {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: Zap,
+      title: t('features.lightningFast.title'),
+      description: t('features.lightningFast.description')
+    },
+    {
+      icon: Shield,
+      title: t('features.enterpriseSecurity.title'),
+      description: t('features.enterpriseSecurity.description')
+    },
+    {
+      icon: Clock,
+      title: t('features.automation247.title'),
+      description: t('features.automation247.description')
+    },
+    {
+      icon: TrendingUp,
+      title: t('features.scalableGrowth.title'),
+      description: t('features.scalableGrowth.description')
+    },
+    {
+      icon: Users,
+      title: t('features.expertSupport.title'),
+      description: t('features.expertSupport.description')
+    },
+    {
+      icon: Sparkles,
+      title: t('features.cuttingEdgeAI.title'),
+      description: t('features.cuttingEdgeAI.description')
+    }
+  ];
+
   return (
     <section className="py-24 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,11 +51,10 @@ const Features: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Why Choose <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Our Platform</span>
+            {t('features.title')}
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            We combine cutting-edge AI technology with deep business expertise to deliver 
-            solutions that transform your operations and accelerate growth.
+            {t('features.subtitle')}
           </p>
         </motion.div>
 
