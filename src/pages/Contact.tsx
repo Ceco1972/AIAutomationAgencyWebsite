@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Clock, Globe, Users } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -37,12 +39,10 @@ const Contact: React.FC = () => {
             className="text-center"
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Let's Build the <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Future</span>
-              <br />Together
+              {t('contact.title')}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Ready to transform your business with AI automation? Get in touch with our experts 
-              to discuss your project and discover how we can help you achieve your goals.
+              {t('contact.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -60,11 +60,10 @@ const Contact: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Get in <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Touch</span>
+                {t('contact.getInTouch.title')}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                Whether you're looking to automate processes, implement AI solutions, or explore 
-                partnership opportunities, we'd love to hear from you.
+                {t('contact.getInTouch.description')}
               </p>
 
               <div className="space-y-6 mb-8">
@@ -73,7 +72,7 @@ const Contact: React.FC = () => {
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">Email Us</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">{t('contact.getInTouch.email')}</div>
                     <div className="text-gray-600 dark:text-gray-300">hello@aiautomationagency.com</div>
                   </div>
                 </div>
@@ -83,7 +82,7 @@ const Contact: React.FC = () => {
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">Call Us</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">{t('contact.getInTouch.call')}</div>
                     <div className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</div>
                   </div>
                 </div>
@@ -93,7 +92,7 @@ const Contact: React.FC = () => {
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">Visit Us</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">{t('contact.getInTouch.visit')}</div>
                     <div className="text-gray-600 dark:text-gray-300">San Francisco, CA</div>
                   </div>
                 </div>
@@ -103,18 +102,18 @@ const Contact: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
                   <Clock className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-                  <div className="font-semibold text-gray-900 dark:text-white mb-1">Response Time</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">Within 2 hours</div>
+                  <div className="font-semibold text-gray-900 dark:text-white mb-1">{t('contact.businessHours.responseTime')}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{t('contact.businessHours.responseTimeValue')}</div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
                   <Globe className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-                  <div className="font-semibold text-gray-900 dark:text-white mb-1">Global Reach</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">25+ Countries</div>
+                  <div className="font-semibold text-gray-900 dark:text-white mb-1">{t('contact.businessHours.globalReach')}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{t('contact.businessHours.globalReachValue')}</div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
                   <Users className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-                  <div className="font-semibold text-gray-900 dark:text-white mb-1">Expert Team</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">50+ AI Specialists</div>
+                  <div className="font-semibold text-gray-900 dark:text-white mb-1">{t('contact.businessHours.expertTeam')}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{t('contact.businessHours.expertTeamValue')}</div>
                 </div>
               </div>
             </motion.div>
@@ -128,14 +127,14 @@ const Contact: React.FC = () => {
             >
               <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  Start Your AI Journey
+                  {t('contact.form.title')}
                 </h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Full Name *
+                        {t('contact.form.fullName')} {t('contact.form.required')}
                       </label>
                       <input
                         type="text"
@@ -150,7 +149,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Email Address *
+                        {t('contact.form.email')} {t('contact.form.required')}
                       </label>
                       <input
                         type="email"
@@ -167,7 +166,7 @@ const Contact: React.FC = () => {
 
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Company Name
+                      {t('contact.form.company')}
                     </label>
                     <input
                       type="text"
@@ -182,7 +181,7 @@ const Contact: React.FC = () => {
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Project Details *
+                      {t('contact.form.projectDetails')} {t('contact.form.required')}
                     </label>
                     <textarea
                       id="message"
@@ -192,7 +191,7 @@ const Contact: React.FC = () => {
                       required
                       rows={6}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-purple-600 transition-colors duration-200 resize-none"
-                      placeholder="Tell us about your project, goals, and how we can help..."
+                      placeholder={t('contact.form.projectDetailsPlaceholder')}
                     />
                   </div>
 
@@ -200,7 +199,7 @@ const Contact: React.FC = () => {
                     type="submit"
                     className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 group"
                   >
-                    Send Message
+                    {t('contact.form.sendMessage')}
                     <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                 </form>
@@ -221,11 +220,10 @@ const Contact: React.FC = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Global Presence</span>
+              {t('contact.map.title')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              With headquarters in San Francisco and team members worldwide, we provide 
-              24/7 support and local expertise across multiple time zones.
+              {t('contact.map.subtitle')}
             </p>
           </motion.div>
 
